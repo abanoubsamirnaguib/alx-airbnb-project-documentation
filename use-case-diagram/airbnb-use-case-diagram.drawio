@@ -1,0 +1,515 @@
+<mxfile host="app.diagrams.net" modified="2025-09-01T00:00:00.000Z" agent="5.0" etag="abc123" version="24.6.4" type="device">
+  <diagram name="Airbnb Use Case Diagram" id="airbnb-use-case">
+    <mxGraphModel dx="2074" dy="1194" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- System Boundary -->
+        <mxCell id="system-boundary" value="Airbnb Clone Backend System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="1200" height="980" as="geometry" />
+        </mxCell>
+        
+        <!-- Actors -->
+        <mxCell id="guest-actor" value="Guest" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="60" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="host-actor" value="Host" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="60" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="admin-actor" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="750" width="60" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- External Systems -->
+        <mxCell id="payment-system" value="Payment&#xa;Gateway" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="350" width="50" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="email-system" value="Email&#xa;Service" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="500" width="50" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Authentication & User Management Use Cases -->
+        <mxCell id="register-account" value="Register Account" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="login" value="Login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="420" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="manage-profile" value="Manage Profile" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="560" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="reset-password" value="Reset Password" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="700" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="enable-2fa" value="Enable 2FA" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="840" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Property Search & Booking Use Cases (Guest) -->
+        <mxCell id="search-properties" value="Search Properties" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="view-property-details" value="View Property&#xa;Details" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="420" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="make-booking" value="Make Booking" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="560" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="manage-bookings" value="Manage Bookings" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="700" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cancel-booking" value="Cancel Booking" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="840" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Payment Use Cases -->
+        <mxCell id="make-payment" value="Make Payment" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="request-refund" value="Request Refund" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Review System Use Cases -->
+        <mxCell id="write-review" value="Write Review" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="view-reviews" value="View Reviews" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="420" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Property Management Use Cases (Host) -->
+        <mxCell id="create-listing" value="Create Property&#xa;Listing" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="manage-listings" value="Manage Property&#xa;Listings" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="420" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="update-availability" value="Update&#xa;Availability" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="560" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="set-pricing" value="Set Pricing" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="manage-host-bookings" value="Manage Host&#xa;Bookings" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="840" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="respond-to-reviews" value="Respond to&#xa;Reviews" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="980" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="view-host-analytics" value="View Host&#xa;Analytics" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Communication Use Cases -->
+        <mxCell id="send-messages" value="Send Messages" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="280" y="640" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="receive-notifications" value="Receive&#xa;Notifications" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="420" y="640" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Admin Use Cases -->
+        <mxCell id="manage-users" value="Manage Users" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="280" y="760" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="moderate-content" value="Moderate Content" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="420" y="760" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="approve-listings" value="Approve Listings" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="560" y="760" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="monitor-system" value="Monitor System" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="700" y="760" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="generate-reports" value="Generate Reports" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="840" y="760" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="manage-payments" value="Manage Payments" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="760" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="backup-system" value="Backup System" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="760" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Use Cases -->
+        <mxCell id="verify-identity" value="Verify Identity" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="880" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="fraud-detection" value="Fraud Detection" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="700" y="880" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Relationships - Guest Actor -->
+        <mxCell id="guest-register" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="register-account">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-login" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="login">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-profile" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="manage-profile">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-reset" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="reset-password">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-2fa" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="enable-2fa">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-search" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="search-properties">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-view" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="view-property-details">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-book" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="make-booking">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-manage-booking" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="manage-bookings">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-cancel" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="cancel-booking">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-payment" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="make-payment">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-refund" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="request-refund">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-write-review" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="write-review">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-view-reviews" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="view-reviews">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-message" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="send-messages">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="guest-notifications" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="guest-actor" target="receive-notifications">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Relationships - Host Actor (inherits Guest capabilities) -->
+        <mxCell id="host-register" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="register-account">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-login" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="login">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-profile" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="manage-profile">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-create-listing" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="create-listing">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-manage-listings" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="manage-listings">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-availability" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="update-availability">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-pricing" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="set-pricing">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-manage-bookings" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="manage-host-bookings">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-respond-reviews" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="respond-to-reviews">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-analytics" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="view-host-analytics">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-messages" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="send-messages">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="host-notifications" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="host-actor" target="receive-notifications">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Relationships - Admin Actor -->
+        <mxCell id="admin-login" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="login">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-manage-users" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="manage-users">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-moderate" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="moderate-content">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-approve" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="approve-listings">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-monitor" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="monitor-system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-reports" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="generate-reports">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-payments" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="manage-payments">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-backup" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="backup-system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-verify" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="verify-identity">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="admin-fraud" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="admin-actor" target="fraud-detection">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- External System Relationships -->
+        <mxCell id="payment-gateway-connection" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="make-payment" target="payment-system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="refund-gateway-connection" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="request-refund" target="payment-system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="email-notification-connection" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="receive-notifications" target="email-system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="email-reset-connection" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="reset-password" target="email-system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="810" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Include and Extend Relationships -->
+        <mxCell id="book-includes-payment" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="make-booking" target="make-payment">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="920" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="register-includes-verify" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="register-account" target="verify-identity">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="920" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="payment-includes-fraud" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="make-payment" target="fraud-detection">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="760" y="380" as="sourcePoint" />
+            <mxPoint x="920" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend-box" value="Legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="150" width="120" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-guest" value="Guest Use Cases" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="180" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-host" value="Host Use Cases" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="220" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-admin" value="Admin Use Cases" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="260" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-security" value="Security Use Cases" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="300" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
